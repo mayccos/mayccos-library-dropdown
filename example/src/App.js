@@ -1,10 +1,37 @@
 import React from 'react'
 
-import { ExampleComponent } from 'mayccos-library-dropdown'
+import { SelectMenu } from 'mayccos-library-dropdown'
 import 'mayccos-library-dropdown/dist/index.css'
-
+const departments = [
+  {
+    option: 'Sales'
+  },
+  {
+    option: 'Marketing'
+  },
+  {
+    option: 'Engineering'
+  },
+  {
+    option: 'Human Resources'
+  },
+  {
+    option: 'Legal'
+  }
+]
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <main>
+      <SelectMenu
+        option={departments}
+        htmlFor='departments'
+        defaultValue='select a department'
+        label='departments'
+        hideLabel={false}
+        wrapperStyle={{ backgroundColor: '#f7f7f7' }}
+      />
+    </main>
+  )
 }
 
 export default App
